@@ -1,0 +1,29 @@
+<!--
+  Generated template for the User page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <!--<ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>-->
+    <ion-navbar color="primary" hideBackButton="true">
+        <ion-title>{{title}}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="logout()"><ion-icon name="log-out"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-tabs color='primary'>
+        <ion-tab tabIcon="create" [root]="adminhome" *ngIf="showAdmin"></ion-tab>
+        <ion-tab tabIcon="camera" [root]="home"></ion-tab>
+        <ion-tab tabIcon="cloud" [root]="useruploads"></ion-tab>
+    </ion-tabs>
+</ion-content>
